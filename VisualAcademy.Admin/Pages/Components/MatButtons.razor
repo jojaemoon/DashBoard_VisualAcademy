@@ -1,0 +1,85 @@
+﻿@page "/Components/MatButtons"
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">MatButtons</h1>
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <h3>MatButton</h3>
+        <MatButton Raised="true">Raised</MatButton>
+        <MatButton Unelevated="true">Unelevated</MatButton>
+        <MatButton Outlined="true">Outlined</MatButton>
+        <MatButton Dense="true">Dense</MatButton>
+
+    </div>
+    <hr />
+    <div class="col-lg-12">
+        <h3>MatTextField</h3>
+        <MatTextField Label="이름" @bind-Value="@name"></MatTextField>
+        <hr />
+        @name
+    </div>
+    <hr />
+    <div class="col-lg-12">
+        <h3>MatTooltip</h3>
+        <MatTooltip Tooltip="Right tooltip" Position="@MatTooltipPosition.Right">
+            <MatButton RefBack="@context">Right</MatButton>
+        </MatTooltip>
+        <MatTooltip Tooltip="Left tooltip" Position="@MatTooltipPosition.Left">
+            <MatButton RefBack="@context">Left</MatButton>
+        </MatTooltip>
+        <MatTooltip Tooltip="Top tooltip" Position="@MatTooltipPosition.Top">
+            <MatButton RefBack="@context">Top</MatButton>
+        </MatTooltip>
+        <MatTooltip Tooltip="Bottom tooltip" Position="@MatTooltipPosition.Bottom">
+            <MatButton RefBack="@context">Bottom</MatButton>
+        </MatTooltip>
+    </div>
+    <hr />
+    @*<div class="col-lg-12">
+        <h3>MatTable</h3>
+        <MatTable Items="@cars" class="mat-elevation-z5">
+            <MatTableHeader>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Horsepower</th>
+            </MatTableHeader>
+            <MatTableRow>
+                <td>@context.Name</td>
+                <td>@String.Format("${0:f2}", @context.Price)</td>
+                <td>@context.Horsepower</td>
+            </MatTableRow>
+        </MatTable>
+    </div>*@
+</div>
+
+@code
+{
+    private string name = "";
+
+    public class Car
+    {
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int Horsepower { get; set; }
+
+        public Car(string name, double price, int horsepower)
+        {
+            Name = name;
+            Price = price;
+            Horsepower = horsepower;
+        }
+    }
+
+    Car[] cars = new[]
+    {
+        new Car("Volkswagen Golf", 10000, 220),
+        new Car("Volkswagen Passat", 11000, 240),
+        new Car("Volkswagen Polo", 12000, 110),
+        new Car("Ford Focus", 13000, 200),
+        new Car("Ford Fiesta", 14000, 160),
+        new Car("Ford Fusion", 15000, 260),
+        new Car("Ford Mondeo", 16000, 120),
+    };
+}
+
