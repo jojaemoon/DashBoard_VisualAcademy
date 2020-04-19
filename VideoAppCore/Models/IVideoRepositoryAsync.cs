@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     /// <summary>
     /// [3][2] 인터페이스(비동기방식): Videos 테이블에 대한 CRUD API 명세서 작성

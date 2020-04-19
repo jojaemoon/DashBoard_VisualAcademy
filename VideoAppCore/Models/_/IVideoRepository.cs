@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     /// <summary>
     /// [3][1] 인터페이스(동기방식): Videos 테이블에 대한 CRUD API 명세서 작성

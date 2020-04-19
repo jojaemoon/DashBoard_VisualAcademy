@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     /// <summary>
     /// [2] 모델 클래스: Video 모델 클래스 = Videos 테이블과 일대일로 매핑

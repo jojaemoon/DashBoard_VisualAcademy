@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     /// <summary>
     /// AuditableBase 클래스: 레코드에 대한 상태 추적을 위한 4개의 속성 제공
@@ -22,7 +22,7 @@ namespace VisualAcademy.Models
         /// <summary>
         ///수정자: LastModifiedBy, ModifiedBy
         /// </summary>
-        public DateTime ModifiedBy { get; set; }
+        public string ModifiedBy { get; set; }
 
         /// <summary>
         /// 수정일

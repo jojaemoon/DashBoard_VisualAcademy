@@ -1,0 +1,57 @@
+﻿@page "/Videos"
+@page "/Videos/Index"
+
+@inject IVideoRepositoryAsync repository
+
+<h3>Video List</h3>
+
+<div>
+    <a href="/Videos/Create" class="btn btn-primary">추가</a>
+</div>
+
+@if (videos == null)
+{
+    <text>로딩 중...</text>
+}
+else if (videos.Count == 0)
+{
+    <text>자료가 없습니다</text>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>URL</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var video in videos)
+            {
+            <tr>
+                <td>@video.Id</td>
+                <td>@video.Title</td>
+                <td><a href="@video.Url">@video.Url</a></td>
+                <td>
+                    <a href="/Videos/Edit/@video.Id">수정</a>
+                    /
+                    <a href="/Videos/Delete/@video.Id">삭제</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    List<Video> videos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await Task.Delay(3000);
+        videos = await repository.GetVideosAsync();
+    }
+}

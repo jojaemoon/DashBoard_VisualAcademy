@@ -4,7 +4,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     public class VideoDbContext : DbContext
     {

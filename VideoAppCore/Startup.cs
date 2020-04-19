@@ -1,21 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VideoAppCore.Areas.Identity;
 using VideoAppCore.Data;
-using VisualAcademy.Models;
+using VideoAppCore.Models;
 
 namespace VideoAppCore
 {
@@ -46,6 +39,9 @@ namespace VideoAppCore
             services.AddEntityFrameworkSqlServer().AddDbContext<VideoDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            // DI Container에 서비스 등록
+            services.AddTransient<IVideoRepositoryAsync, VideoRepositoryEfCoreAsync>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VisualAcademy.Models
+namespace VideoAppCore.Models
 {
     /// <summary>
     /// [4][2][1] 리포지토리 클래스(동기 방식): Micro ORM인 Dapper를 사용하여 CRUD 구현
