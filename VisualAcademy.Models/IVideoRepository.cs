@@ -4,7 +4,7 @@ using System.Text;
 namespace VisualAcademy.Models
 {
     /// <summary>
-    /// [3] 인터페이스: Videos 테이블에 대한 CRUD API 명세서 작성
+    /// [3][1] 인터페이스(동기방식): Videos 테이블에 대한 CRUD API 명세서 작성
     /// </summary>
     public interface IVideoRepository
     {
@@ -16,4 +16,5 @@ namespace VisualAcademy.Models
 
         // 추가: 검색, 페이징, 소팅, ...
     }
+
 }

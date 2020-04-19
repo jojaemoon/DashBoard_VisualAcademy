@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace VisualAcademy.Models
 {
     /// <summary>
-    /// [4][3] 리포지토리 클래스: Full ORM인 Ef Core를 사용하여 CRUD 구현
+    /// [4][3][1] 리포지토리 클래스(동기 방식): Full ORM인 Ef Core를 사용하여 CRUD 구현
     /// </summary>
     public class VideoRepositoryEfCore : IVideoRepository
     {
