@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace VisualAcademy.Models
 {
     /// <summary>
-    /// [4][1] 리포지토리 클래스: ADO.NET을 사용하여 CRUD
+    /// [4][1] 리포지토리 클래스: 순수 ADO.NET을 사용하여 CRUD 구현
     /// </summary>
     public class VideoRepositoryAdoNet : IVideoRepository
     {
