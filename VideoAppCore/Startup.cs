@@ -42,7 +42,7 @@ namespace VideoAppCore
             services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
             services.AddSingleton<WeatherForecastService>();
 
-            // 새로운 DbContext 클래스 등록
+            // [5] 새로운 DbContext 클래스 등록
             services.AddEntityFrameworkSqlServer().AddDbContext<VideoDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));

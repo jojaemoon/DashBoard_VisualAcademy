@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace VisualAcademy.Models
@@ -8,16 +7,13 @@ namespace VisualAcademy.Models
     /// [2] 모델 클래스: Video 모델 클래스 = Videos 테이블과 일대일로 매핑
     /// Videos => Video, VideoModel, VideoViewModel, VideoBase, VideoDto, VideoEntity, ...
     /// </summary>
-    public class Video
+    public class Video : AuditableBase
     {
         /// <summary>
         /// 일련번호
         /// </summary>
         public int Id { get; set; }
-        /// <summary>
-        /// 등록일
-        /// </summary>
-        public DateTimeOffset Create { get; set; }
+        
         /// <summary>
         /// 동영상 제목
         /// </summary>
